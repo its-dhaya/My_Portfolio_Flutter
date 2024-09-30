@@ -28,7 +28,13 @@ class _IntroState extends State<Intro> {
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 800),
                   curve: Curves.easeInOut,
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.only(
+                    top: 35,
+                    bottom: 35,
+                    left: 35,
+                    right:
+                        isHovered ? 200 : 90, // Increase padding on the right
+                  ),
                   decoration: BoxDecoration(
                     color: isHovered ? Colors.white : Colors.transparent,
                     borderRadius: BorderRadius.circular(10),

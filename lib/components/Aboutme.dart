@@ -59,6 +59,7 @@ class AboutMe extends StatelessWidget {
                     Divider(
                       color: AppColor.white,
                       endIndent: 65,
+                      thickness: 3,
                     ),
                     SizedBox(height: 20),
 
@@ -101,6 +102,7 @@ class AboutMe extends StatelessWidget {
                     Divider(
                       color: AppColor.white,
                       endIndent: 65,
+                      thickness: 3,
                     ),
                     SizedBox(height: 20),
 
@@ -124,54 +126,73 @@ class AboutMe extends StatelessWidget {
                               SizedBox(height: 10),
                               Row(
                                 children: [
-                                  Text(
-                                    'Surf in!!',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.white,
-                                      fontFamily: 'Judson',
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 60),
+                                    child: Text(
+                                      'Surf in!!',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                        fontFamily: 'Judson',
+                                      ),
                                     ),
                                   ),
-                                  SizedBox(width: 5), // Add some space
-                                  Text(
-                                    '>',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: AppColor.orange,
-                                      fontFamily: 'Judson',
-                                    ),
+                                  SizedBox(width: 20), // Add some space
+                                  Image.asset(
+                                    'assets/Techs/greater.png',
+                                    height: 20,
+                                    width: 20,
                                   ),
                                   SizedBox(
                                       width:
-                                          10), // Space between '>' and button
+                                          20), // Space between '>' and button
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: AppColor.orange,
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 20),
-                                    ),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+                                        backgroundColor: AppColor.orange,
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 20),
+                                        minimumSize: Size(150, 50)),
                                     onPressed: () {
-                                      // Add resume button functionality here
+                                      // Add resume button afunctionality here
                                     },
                                     child: Text(
                                       'My Resume',
                                       style: TextStyle(
                                           color: AppColor.black,
                                           fontFamily: 'Judson',
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20),
                                     ),
                                   ),
                                 ],
                               ),
                             ],
                           ),
-                          Column(
+                          Padding(
+                            padding: const EdgeInsets.only(right: 400),
+                            child: SizedBox(
+                              height:
+                                  100, // Adjust this value to control the height of the divider
+                              child: VerticalDivider(
+                                thickness: 3,
+                                color: AppColor.white,
+                              ),
+                            ),
+                          ),
+                          Row(
                             children: [
-                              Text(
-                                'AGE : 20',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.white,
+                              Padding(
+                                padding: const EdgeInsets.only(right: 20),
+                                child: Text(
+                                  'AGE : 20',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                               Text(
