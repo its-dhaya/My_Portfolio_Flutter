@@ -1,4 +1,5 @@
 import 'package:dhayanithi/components/Services.dart';
+import 'package:dhayanithi/components/projects.dart';
 import 'package:flutter/material.dart';
 import 'package:dhayanithi/components/Intro.dart';
 import 'package:dhayanithi/components/Navbarpage.dart';
@@ -27,7 +28,8 @@ class _HomepageState extends State<Homepage> {
             SizedBox(height: 60), // Add spacing if needed
             AboutMe(),
             SizedBox(height: 20),
-            SkillsService()
+            SkillsService(),
+            MyProjects(),
           ],
         ),
       ),
