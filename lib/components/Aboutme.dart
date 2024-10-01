@@ -14,15 +14,13 @@ class AboutMe extends StatelessWidget {
                 'About me',
                 style: TextStyle(
                   fontSize: 50,
-                  color: Colors.white,
+                  color: AppColor.white,
                   fontWeight: FontWeight.normal,
                   fontFamily: 'Judson',
                   letterSpacing: 3,
                 ),
               ),
               SizedBox(height: 20),
-
-              // Apply consistent left padding of 100 for the rest of the content
               Padding(
                 padding: const EdgeInsets.only(left: 100), // Consistent padding
                 child: Column(
@@ -37,7 +35,6 @@ class AboutMe extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10),
-
                     Padding(
                       padding: const EdgeInsets.only(right: 50),
                       child: Text(
@@ -62,8 +59,6 @@ class AboutMe extends StatelessWidget {
                       thickness: 3,
                     ),
                     SizedBox(height: 20),
-
-                    // Technologies section
                     Text(
                       'Technologies I know and have worked with:',
                       style: TextStyle(
@@ -73,8 +68,6 @@ class AboutMe extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 10),
-
-                    // Display technologies with images
                     Row(
                       children: [
                         _buildTechRow('Flutter'),
@@ -105,11 +98,8 @@ class AboutMe extends StatelessWidget {
                       thickness: 3,
                     ),
                     SizedBox(height: 20),
-
-                    // Additional information section
                     Padding(
-                      padding: const EdgeInsets.only(
-                          right: 65.0), // Adjust as necessary
+                      padding: const EdgeInsets.only(right: 65.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -119,93 +109,115 @@ class AboutMe extends StatelessWidget {
                               Text(
                                 'Additionals:',
                                 style: TextStyle(
-                                    fontSize: 35,
-                                    color: AppColor.orange,
-                                    fontFamily: 'Judson'),
+                                  fontSize: 35,
+                                  color: AppColor.orange,
+                                  fontFamily: 'Judson',
+                                ),
                               ),
                               SizedBox(height: 10),
                               Row(
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 60),
-                                    child: Text(
-                                      'Surf in!!',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                        fontFamily: 'Judson',
-                                      ),
+                                  Text(
+                                    'Surf in!!',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      fontFamily: 'Judson',
                                     ),
                                   ),
-                                  SizedBox(width: 20), // Add some space
+                                  SizedBox(width: 20),
                                   Image.asset(
                                     'assets/Techs/greater.png',
                                     height: 20,
                                     width: 20,
                                   ),
-                                  SizedBox(
-                                      width:
-                                          20), // Space between '>' and button
+                                  SizedBox(width: 20),
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                        ),
-                                        backgroundColor: AppColor.orange,
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: 20),
-                                        minimumSize: Size(150, 50)),
-                                    onPressed: () {
-                                      // Add resume button afunctionality here
-                                    },
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      backgroundColor: AppColor.orange,
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 20),
+                                      minimumSize: Size(150, 50),
+                                    ),
+                                    onPressed: () {},
                                     child: Text(
                                       'My Resume',
                                       style: TextStyle(
-                                          color: AppColor.black,
-                                          fontFamily: 'Judson',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20),
+                                        color: AppColor.black,
+                                        fontFamily: 'Judson',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
                             ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 400),
-                            child: SizedBox(
-                              height:
-                                  100, // Adjust this value to control the height of the divider
-                              child: VerticalDivider(
-                                thickness: 3,
-                                color: AppColor.white,
-                              ),
+                          SizedBox(
+                            height: 100,
+                            child: VerticalDivider(
+                              thickness: 3,
+                              color: AppColor.white,
                             ),
                           ),
-                          Row(
+                          SizedBox(width: 10),
+                          Column(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 20),
-                                child: Text(
-                                  'AGE : 20',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
+                              Row(
+                                children: [
+                                  Text(
+                                    'AGE : ',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                      fontFamily: 'Judson',
+                                    ),
                                   ),
-                                ),
+                                  Text(
+                                    '20',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                      fontFamily: 'Judson',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(width: 20),
+                                  Text(
+                                    'LOCATION : ',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                      fontFamily: 'Judson',
+                                    ),
+                                  ),
+                                  Text(
+                                    'CHENNAI',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                      fontFamily: 'Judson',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Text(
-                                'LOCATION : CHENNAI',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.white,
-                                ),
-                              ),
+                              SizedBox(height: 20),
                             ],
                           ),
                         ],
                       ),
+                    ),
+                    SizedBox(height: 20),
+                    // Divider after the entire "Additionals" and "AGE/LOCATION" section
+                    Divider(
+                      endIndent: 65,
+                      color: AppColor.white,
+                      thickness: 3,
                     ),
                   ],
                 ),
@@ -220,16 +232,20 @@ class AboutMe extends StatelessWidget {
   Widget _buildTechRow(String label) {
     return Row(
       children: [
-        Image.asset('assets/Techs/techs.png',
-            width: 20, height: 20), // Adjust size as needed
+        Image.asset(
+          'assets/Techs/techs.png',
+          width: 20,
+          height: 20,
+        ), // Adjust size as needed
         SizedBox(width: 2),
         Text(
           label,
           style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontFamily: 'Judson',
-              letterSpacing: 3),
+            fontSize: 20,
+            color: Colors.white,
+            fontFamily: 'Judson',
+            letterSpacing: 3,
+          ),
         ),
       ],
     );
