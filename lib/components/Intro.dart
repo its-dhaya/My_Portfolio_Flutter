@@ -1,5 +1,6 @@
 import 'package:dhayanithi/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Intro extends StatefulWidget {
@@ -23,6 +24,7 @@ class _IntroState extends State<Intro> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               MouseRegion(
+                cursor: SystemMouseCursors.click,
                 onEnter: (_) => setState(() => isHovered = true),
                 onExit: (_) => setState(() => isHovered = false),
                 child: AnimatedContainer(

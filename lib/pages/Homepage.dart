@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:dhayanithi/components/Intro.dart';
 import 'package:dhayanithi/components/Navbarpage.dart';
 import 'package:dhayanithi/components/AboutMe.dart'; // Import AboutMe page
-import 'package:dhayanithi/constants.dart';
+import 'package:dhayanithi/constants.dart'; // Import your MyProjects widget
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -29,7 +29,7 @@ class _HomepageState extends State<Homepage> {
             AboutMe(),
             SizedBox(height: 20),
             SkillsService(),
-            MyProjects(),
+            MyProjects(), // Add your MyProjects widget here
           ],
         ),
       ),
