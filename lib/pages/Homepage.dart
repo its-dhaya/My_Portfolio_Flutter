@@ -5,6 +5,7 @@ import 'package:dhayanithi/components/Intro.dart';
 import 'package:dhayanithi/components/Navbarpage.dart';
 import 'package:dhayanithi/components/AboutMe.dart'; // Import AboutMe page
 import 'package:dhayanithi/constants.dart'; // Import your MyProjects widget
+import 'package:dhayanithi/components/ContactSection.dart'; // Import your ContactSection
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -29,7 +30,8 @@ class _HomepageState extends State<Homepage> {
             AboutMe(),
             SizedBox(height: 20),
             SkillsService(),
-            MyProjects(), // Add your MyProjects widget here
+            MyProjects(), // Add your MyProjects widget here // Add spacing before contact section
+            ContactSection(), // Add the ContactSection widget here
           ],
         ),
       ),
