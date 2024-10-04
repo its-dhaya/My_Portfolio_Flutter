@@ -21,8 +21,7 @@ class ContactSection extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Padding(
-          padding:
-              const EdgeInsets.only(left: 180.0), // Padding to move text right
+          padding: const EdgeInsets.only(left: 180.0),
           child: const Text(
             "Let's build something together",
             style: TextStyle(
@@ -33,44 +32,26 @@ class ContactSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 40),
-        // Set the height for the section
-        Container(
-          height: 300, // Adjust this value to increase or decrease the height
-          width: double.infinity, // Full width of the screen
-          decoration: BoxDecoration(
-            color: AppColor.grey,
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20),
-            ), // Apply grey color using BoxDecoration
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    ContactCard(
-                      icon: Icons.home,
-                      label: 'CHENNAI, INDIA',
-                    ),
-                    ContactCard(
-                      icon: Icons.email_rounded,
-                      label: 'dhayanithi10409@gmail.com',
-                    ),
-                    ContactCard(
-                      icon: FontAwesomeIcons.whatsapp,
-                      label: '+91-9962083578',
-                    ),
-                  ],
-                ),
-              ],
+        // Just place the Contact Cards evenly without grey container
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const [
+            ContactCard(
+              icon: Icons.home,
+              label: 'CHENNAI, INDIA',
             ),
-          ),
+            ContactCard(
+              icon: Icons.email_rounded,
+              label: 'dhayanithi10409@gmail.com',
+            ),
+            ContactCard(
+              icon: FontAwesomeIcons.whatsapp,
+              label: '+91-9962083578',
+            ),
+          ],
         ),
         const SizedBox(height: 40),
+        // "Made in love with Flutter" text outside and at the bottom of the page
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
@@ -89,7 +70,7 @@ class ContactSection extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 20), // Spacing to adjust it to the bottom
       ],
     );
   }
@@ -108,16 +89,16 @@ class ContactCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150, // Set a fixed width to prevent stretching
+      height: 150,
+      width: 250, // Set a fixed width to prevent stretching
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: const Color(0xFFFFA500), // Orange color
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20), // Curved top-left corner
-          topRight: Radius.circular(20), // Curved top-right corner
-        ),
+        borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
+        mainAxisAlignment:
+            MainAxisAlignment.center, // Center the contents vertically
         children: [
           Icon(
             icon,

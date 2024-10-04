@@ -174,20 +174,25 @@ class _MyProjectsState extends State<MyProjects> {
                     child: Container(
                       width: 650,
                       height: 50,
-                      color: AppColor.orange.withOpacity(0.7),
+                      decoration: BoxDecoration(
+                        color: AppColor.orange.withOpacity(0.7),
+                        borderRadius: BorderRadius.circular(
+                            23), // Add this to curve the container
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             'Source',
                             style: TextStyle(
-                                color: AppColor.black,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Judson'),
+                              color: AppColor.black,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Judson',
+                            ),
                           ),
-                          SizedBox(width: 8),
-                          Icon(
+                          const SizedBox(width: 8),
+                          const Icon(
                             Icons.arrow_forward,
                             color: AppColor.black,
                             size: 24,
