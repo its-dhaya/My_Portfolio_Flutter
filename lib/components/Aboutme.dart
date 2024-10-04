@@ -1,3 +1,4 @@
+import 'package:dhayanithi/components/Resume.dart';
 import 'package:dhayanithi/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -142,7 +143,9 @@ class AboutMe extends StatelessWidget {
                                           EdgeInsets.symmetric(horizontal: 20),
                                       minimumSize: Size(150, 50),
                                     ),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      ResumeButton();
+                                    },
                                     child: Text(
                                       'My Resume',
                                       style: TextStyle(
@@ -213,7 +216,6 @@ class AboutMe extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 20),
-                    // Divider after the entire "Additionals" and "AGE/LOCATION" section
                     Divider(
                       endIndent: 65,
                       color: AppColor.white,
@@ -236,7 +238,7 @@ class AboutMe extends StatelessWidget {
           'assets/Techs/techs.png',
           width: 20,
           height: 20,
-        ), // Adjust size as needed
+        ),
         SizedBox(width: 2),
         Text(
           label,
