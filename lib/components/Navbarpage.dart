@@ -52,7 +52,7 @@ class _NavbarItemState extends State<NavbarItem> {
           widget.title,
           style: TextStyle(
             color: Colors.white,
-            fontFamily: 'Judson',
+            fontFamily: 'nats',
             fontSize: 22,
           ),
         ),

@@ -36,7 +36,7 @@ class _MyProjectsState extends State<MyProjects> {
             SizedBox(
                 height: 30), // Add space between the title and the projects
             // First row with 2 images
-            Row(
+            Row(  
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 _buildProjectBox(

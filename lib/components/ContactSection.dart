@@ -7,10 +7,10 @@ class ContactSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        const SizedBox(height: 60),
-        const Text(
+         SizedBox(height: 60),
+         Text(
           'Get in touch',
           style: TextStyle(
               color: Colors.white,
@@ -19,10 +19,10 @@ class ContactSection extends StatelessWidget {
               fontFamily: 'Judson',
               letterSpacing: 3),
         ),
-        const SizedBox(height: 10),
+        SizedBox(height: 10),
         Padding(
-          padding: const EdgeInsets.only(left: 180.0),
-          child: const Text(
+          padding:  EdgeInsets.only(left: 180.0),
+          child:  Text(
             "Let's build something together",
             style: TextStyle(
               color: AppColor.orange,
@@ -31,11 +31,11 @@ class ContactSection extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 40),
+        SizedBox(height: 40),
         // Just place the Contact Cards evenly without grey container
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
+          children:  [
             ContactCard(
               icon: Icons.home,
               label: 'CHENNAI, INDIA',
@@ -46,17 +46,17 @@ class ContactSection extends StatelessWidget {
             ),
             ContactCard(
               icon: FontAwesomeIcons.whatsapp,
-              label: '+91-9962083578',
+              label: '+91-0000000000',
             ),
           ],
         ),
-        const SizedBox(height: 40),
+        SizedBox(height: 40),
         // "Made in love with Flutter" text outside and at the bottom of the page
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             Text(
-              'Made in ',
+              'Made with ',
               style: TextStyle(color: Colors.white),
             ),
             Icon(
@@ -65,12 +65,12 @@ class ContactSection extends StatelessWidget {
               size: 18,
             ),
             Text(
-              ' with Flutter',
+              ' in Flutter',
               style: TextStyle(color: Colors.white),
             ),
           ],
         ),
-        const SizedBox(height: 20), // Spacing to adjust it to the bottom
+        SizedBox(height: 20), // Spacing to adjust it to the bottom
       ],
     );
   }
